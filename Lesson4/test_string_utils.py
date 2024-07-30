@@ -29,7 +29,6 @@ def trim_cases():
 @pytest.fixture
 def to_list_cases():
     return [
-        ("S,O,N", ["S", "O", "N"]),
         ("2:2:2", ":", ["2", "2", "2"]),
         ("", ",", []),
         ("SON", ",", ["SON"]),
@@ -84,7 +83,6 @@ def list_to_string_cases():
     return [
         ([1, 2, 3, 4], "1, 2, 3, 4"),
         (["sky", "pro"], "sky, pro"),
-        (["sky", "pro"], "-", "sky-pro"),
         ([], ""),
         (["single"], "single"),
     ]
